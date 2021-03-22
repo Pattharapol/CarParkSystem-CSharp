@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1EB5A68-B4B9-49BA-AC2E-1CB500C0B3B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CarParkSystem</RootNamespace>
+    <AssemblyName>CarParkSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MSIGsmCommCommunication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="MSIGsmCommServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MSIGsmCommServer.dll</HintPath>
+    </Reference>
+    <Reference Include="RS232, Version=1.24.0.0, Culture=neutral, PublicKeyToken=515d87df384dcc81">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\RS232.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseAccess.cs" />
+    <Compile Include="Forms\AutoTypeForm\frmAutoTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AutoTypeForm\frmAutoTypeForm.Designer.cs">
+      <DependentUpon>frmAutoTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DriverType\frmDriverType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DriverType\frmDriverType.Designer.cs">
+      <DependentUpon>frmDriverType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GSMForm\frmGSMconnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GSMForm\frmGSMconnection.Designer.cs">
+      <DependentUpon>frmGSMconnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ParkingForm\frmAllVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParkingForm\frmAllVehicle.Designer.cs">
+      <DependentUpon>frmAllVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ParkingForm\frmCheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParkingForm\frmCheckIn.Designer.cs">
+      <DependentUpon>frmCheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ParkingForm\frmCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParkingForm\frmCheckOut.Designer.cs">
+      <DependentUpon>frmCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ParkingForm\frmParkingHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParkingForm\frmParkingHistory.Designer.cs">
+      <DependentUpon>frmParkingHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegistrationForm\PersonRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegistrationForm\PersonRegistration.Designer.cs">
+      <DependentUpon>PersonRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserForm\LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserForm\LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SourceCode\ComboList.cs" />
+    <Compile Include="SourceCode\PortConfiguration.cs" />
+    <Compile Include="SourceCode\USBDeviceInfo.cs" />
+    <EmbeddedResource Include="Forms\AutoTypeForm\frmAutoTypeForm.resx">
+      <DependentUpon>frmAutoTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DriverType\frmDriverType.resx">
+      <DependentUpon>frmDriverType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GSMForm\frmGSMconnection.resx">
+      <DependentUpon>frmGSMconnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParkingForm\frmAllVehicle.resx">
+      <DependentUpon>frmAllVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParkingForm\frmCheckIn.resx">
+      <DependentUpon>frmCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParkingForm\frmCheckOut.resx">
+      <DependentUpon>frmCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParkingForm\frmParkingHistory.resx">
+      <DependentUpon>frmParkingHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegistrationForm\PersonRegistration.resx">
+      <DependentUpon>PersonRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserForm\LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Parking-Industry-768x276.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-human-illustration-computer-icons-driving-chauffeur-icon-library-bus-driver-miscellaneous-logo-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-computer-icons-share-icon-register-icon-black-silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38-384151_clipart-resolution-980912-online-check-in-icon-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-out-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\301-3019347_purchase-history-icon-transaction-history-icon-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SMSLibrary\SMSLibrary\SMSLibrary.csproj">
+      <Project>{199146f6-13b9-4f06-adab-bdd68fb8a79d}</Project>
+      <Name>SMSLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
